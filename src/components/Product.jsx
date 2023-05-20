@@ -1,45 +1,48 @@
 import styled from "styled-components";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import SearchIcon from '@mui/icons-material/Search';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import SearchIcon from "@mui/icons-material/Search";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { mobile } from "../responsive";
 
 const Info = styled.div`
   opacity: 0;
-  width: 100%;
+  width: 78%;
   height: 105%;
+  margin-top: 15px;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0,0.2);
+  /* top: 0;
+  left: 0; */
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:all 0.5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
-`
+  ${mobile({ width: "85%" })}
+`;
 const Container = styled.div`
-    flex: 1;
-    margin: 30px;
-    min-height: 280px;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    //background-color: white;
-    position: relative;
+  flex: 1;
+  margin: 30px;
+  min-height: 280px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background-color: white;
+  position: relative;
 
-    &:hover ${Info}{
-      opacity: 1;
-    }
-`
+  &:hover ${Info} {
+    opacity: 1;
+  }
+`;
 
 const Image = styled.img`
   height: 105%;
   z-index: 2;
   object-fit: cover;
   margin-top: 17px;
-`
+`;
 
 const Icon = styled.div`
   width: 40px;
@@ -56,26 +59,25 @@ const Icon = styled.div`
     background-color: white;
     transform: scale(1.1);
   }
-`
+`;
 
-const Product = ({item}) => {
+const Product = ({ item }) => {
   return (
     <Container>
-      
-      <Image src={item.img} /> 
+      <Image src={item.img} />
       <Info>
         <Icon>
-            <ShoppingCartOutlinedIcon />
+          <ShoppingCartOutlinedIcon />
         </Icon>
         <Icon>
-            <SearchIcon />
+          <SearchIcon />
         </Icon>
         <Icon>
-            <FavoriteBorderIcon />
+          <FavoriteBorderIcon />
         </Icon>
       </Info>
     </Container>
   );
-}
+};
 
 export default Product;

@@ -62,7 +62,8 @@ const Right = styled.div`
   ${mobile({ justifyContent: "center", flex: "2" })}
 `;
 const MenuItem = styled.div`
-  text-decoration: underline !important;
+  /* text-decoration: underline !important; */
+  text-decoration: none !important;
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
@@ -84,12 +85,16 @@ const Navbar = () => {
           <Logo>BILLY</Logo>
         </Center>
         <Right>
-          <MenuItem>
-            <Link to={`/register`}>REGISTER</Link>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
+          {/* <MenuItem>
+            <Link to={`/register`} className="link">
+              REGISTER
+            </Link>
           </MenuItem>
           <MenuItem>
             <Link to={`/login`}>SIGN IN</Link>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <Link to={`/cart`}>

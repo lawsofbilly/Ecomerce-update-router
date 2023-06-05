@@ -73,10 +73,14 @@ const Product = ({ item }) => {
           </Link>
         </Icon>
         <Icon>
-          <SearchIcon />
+          <Link to={`/product`}>
+            <SearchIcon />
+          </Link>
         </Icon>
         <Icon>
-          <FavoriteBorderIcon />
+          <Link to={`/product`}>
+            <FavoriteBorderIcon />
+          </Link>
         </Icon>
       </Info>
     </Container>

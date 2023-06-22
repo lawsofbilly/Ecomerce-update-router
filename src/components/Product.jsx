@@ -68,17 +68,26 @@ const Product = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Icon>
-          <Link to={`/product`}>
+          <Link
+            to={`/product`}
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
             <ShoppingCartOutlinedIcon />
           </Link>
         </Icon>
         <Icon>
-          <Link to={`/product`}>
+          <Link
+            to={`/product`}
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
             <SearchIcon />
           </Link>
         </Icon>
         <Icon>
-          <Link to={`/product`}>
+          <Link
+            to={`/product`}
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
             <FavoriteBorderIcon />
           </Link>
         </Icon>

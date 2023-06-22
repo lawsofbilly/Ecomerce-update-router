@@ -1,6 +1,8 @@
 import React from "react";
 import { styled } from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
+// import Navbar from "../components/Navbar";
 
 const Container = styled.div`
   width: 100vw;
@@ -51,7 +53,7 @@ const Button = styled.button`
   margin-bottom: 10px;
   margin-top: 5px;
 `;
-const Link = styled.a`
+const Under = styled.a`
   font-size: 12px;
   font-weight: 250;
   margin: 5px 0px;
@@ -68,8 +70,13 @@ const Login = () => {
           <Input placeholder="username" />
           <Input placeholder="password" />
           <Button>CREATE</Button>
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Under>DO NOT YOU REMEMBER THE PASSWORD?</Under>
+          <Link
+            to={`/register`}
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <Under>CREATE A NEW ACCOUNT</Under>
+          </Link>
         </Form>
       </Wrapper>
     </Container>

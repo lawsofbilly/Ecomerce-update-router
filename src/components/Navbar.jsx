@@ -44,6 +44,7 @@ const Input = styled.input`
 `;
 //---------------------------------------------------------------------//
 const Center = styled.div`
+  /* text-decoration: none; */
   //width: 33.3%;
   flex: 1;
   text-align: center;
@@ -82,11 +83,26 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>BILLY</Logo>
+          <Link
+            to={`/`}
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <Logo>BILLY</Logo>
+          </Link>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <Link
+            to={`/register`}
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link
+            to={`/login`}
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <MenuItem>SIGN IN</MenuItem>
+          </Link>
           {/* <MenuItem>
             <Link to={`/register`} className="link">
               REGISTER
@@ -97,7 +113,10 @@ const Navbar = () => {
           </MenuItem> */}
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              <Link to={`/cart`}>
+              <Link
+                to={`/cart`}
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
                 <ShoppingCartOutlinedIcon />
               </Link>
             </Badge>
